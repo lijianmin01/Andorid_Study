@@ -27,6 +27,28 @@
         <requestFocus/>
     </TextView>
 
+    <!--按钮-->
+    <Button
+        android:id="@+id/btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="按钮"
+        android:background="@drawable/btn_selector"
+        android:backgroundTint="@color/btn_color_selector"
+        android:width="200dp"
+        android:height="100dp" />
+
+    <Button
+        android:id="@+id/btnClick"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="按钮"
+        android:background="@drawable/btn_selector"
+        android:backgroundTint="@color/btn_color_selector"
+        android:onClick="btnClickFun"
+        android:width="200dp"
+        android:height="100dp" />
+
 
 
 </LinearLayout>
