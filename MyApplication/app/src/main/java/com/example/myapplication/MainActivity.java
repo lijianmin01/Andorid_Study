@@ -7,11 +7,15 @@ import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
     private  static final String TAG = "Hello World";
+    // 用户  密码  全局
+    private EditText user,pwd;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -41,15 +45,30 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        /*触摸事件*/
-        btn.setOnTouchListener(new View.OnTouchListener(){
+//        /*触摸事件*/
+//        btn.setOnTouchListener(new View.OnTouchListener(){
+//
+//            @Override
+//            public boolean onTouch(View v, MotionEvent event) {
+//                Log.e(TAG, "onTouch: " +event.getAction());
+//                return false;
+//            }
+//        });
+        /*获取用户名和密码*/
+        Button userPwdBtn = findViewById(R.id.getUserBtn);
+        user = findViewById(R.id.user);
+        pwd = findViewById(R.id.pwd);
 
+        userPwdBtn.setOnClickListener(new View.OnClickListener() {
             @Override
-            public boolean onTouch(View v, MotionEvent event) {
-                Log.e(TAG, "onTouch: " +event.getAction());
-                return false;
+            public void onClick(View v) {
+                String userText = user.getText().toString();
+                String pwdText = pwd.getText().toString();
+                Log.e("leo","用户名："+userText);
+                Log.e("leo","密码："+pwdText );
             }
         });
+
     }
 
     public void btnClickFun(View view) {
