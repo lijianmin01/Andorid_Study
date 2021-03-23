@@ -1,2 +1,4 @@
+include ':myprogressbar'
+include ':myimageview'
 include ':app'
 rootProject.name = "My Application"
